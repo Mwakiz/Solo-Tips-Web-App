@@ -15,7 +15,7 @@ export default function HomePage() {
 
   async function fetchData() {
     try {
-      const response = await fetch("https://faderriko.github.io/WebTips/plans.json");
+      const response = await fetch("https://mwakiz.github.io/plan/plan.json");
       const response2 = await fetch("https://faderriko.github.io/WebTips/prediction_results.json");
       const data = await response.json();
       const data2 = await response2.json();
