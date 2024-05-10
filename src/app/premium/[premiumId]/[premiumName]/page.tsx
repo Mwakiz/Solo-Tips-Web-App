@@ -36,23 +36,70 @@ export default function Premium() {
 
         }
 
-        if (params.premiumId == "sportpesa_mega_jackpot") {
-          setPredictions(data.sportpesa_mega_jackpot)
+        if (params.premiumId == "sportpesa_mega_1") {
+          setPredictions(data.sportpesa_mega_1)
 
         }
 
-        if (params.premiumId == "sportpesa_mid_week_jackpot") {
-          setPredictions(data.sportpesa_mid_week_jackpot)
+        if (params.premiumId == "sportpesa_mega_2") {
+          setPredictions(data.sportpesa_mega_2)
+
+        }
+      if (params.premiumId == "sportpesa_mega_3") {
+          setPredictions(data.sportpesa_mega_3)
+
+        }
+      if (params.premiumId == "sportpesa_mega_4") {
+          setPredictions(data.sportpesa_mega_4)
+
+        }
+      if (params.premiumId == "sportpesa_mid_1") {
+          setPredictions(data.sportpesa_mid_1)
+
+        }
+      if (params.premiumId == "sportpesa_mid_2") {
+          setPredictions(data.sportpesa_mid_2)
+
+        }
+      if (params.premiumId == "sportpesa_mid_3") {
+          setPredictions(data.sportpesa_mid_3)
+
+        }
+      if (params.premiumId == "sportpesa_mid_4") {
+          setPredictions(data.sportpesa_mid_4)
+
+        }
+        if (params.premiumId == "betika_1") {
+          setPredictions(data.betika_1)
+
+        }
+      if (params.premiumId == "betika_2") {
+          setPredictions(data.betika_2)
+
+        }
+      if (params.premiumId == "betika_3") {
+          setPredictions(data.betika_3)
+
+        }
+      if (params.premiumId == "betika_4") {
+          setPredictions(data.betika_4)
 
         }
 
-        if (params.premiumId == "betika_jackpot") {
-          setPredictions(data.betika_jackpot)
+        if (params.premiumId == "mozzart_1") {
+          setPredictions(data.mozzart_1)
 
         }
+      if (params.premiumId == "mozzart_2") {
+          setPredictions(data.mozzart_2)
 
-        if (params.premiumId == "mozzart_jackpot") {
-          setPredictions(data.mozzart_jackpot)
+        }
+      if (params.premiumId == "mozzart_3") {
+          setPredictions(data.mozzart_3)
+
+        }
+       if (params.premiumId == "mozzart_4") {
+          setPredictions(data.mozzart_4)
 
         }
 
