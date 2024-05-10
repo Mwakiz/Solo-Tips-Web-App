@@ -18,7 +18,7 @@ export default function Premium() {
   async function fetchData() {
     try {
 
-      const response = await fetch("https://faderriko.github.io/WebTips/predictions.json");
+      const response = await fetch("https://mwakiz.github.io/plan/predictions.json");
       const data = await response.json();
       const name = params.premiumName.split('%20').join(' ')
       const id = params.premiumId
