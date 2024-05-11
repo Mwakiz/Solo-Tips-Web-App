@@ -10,7 +10,7 @@ export default function Results() {
     const [loading, setLoading] = useState(true);
     async function fetchData() {
         try {
-            const response = await fetch("https://faderriko.github.io/WebTips/prediction_results.json");
+            const response = await fetch("https://mwakiz.github.io/plan/results.json");
             const data = await response.json();
             console.log("response data", data.predictionResults)
             setResults(data.predictionResults);
