@@ -16,9 +16,8 @@ export default function Plan({ params }: { params: { planIndex: any } }) {
 
   async function fetchData() {
     try {
-      const response = await fetch("https://faderriko.github.io/WebTips/plans.json");
-      const response2 = await fetch("https://faderriko.github.io/WebTips/predictions.json");
-
+      const response = await fetch("https://mwakiz.github.io/plan/plan.json");
+      const response2 = await fetch("https://mwakiz.github.io/plan/results.json");
       const data = await response.json();
       const data2 = await response2.json();
 
