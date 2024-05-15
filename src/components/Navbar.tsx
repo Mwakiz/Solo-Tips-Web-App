@@ -10,7 +10,7 @@ const Navbar = () => {
     const [loading, setLoading] = useState(true);
     async function fetchData() {
         try {
-            const response = await fetch("https://faderriko.github.io/WebTips/plans.json");
+            const response = await fetch("https://mwakiz.github.io/plan/plan.json");
             const data = await response.json();
             settTelegramLink(data.telegramLink);
             console.log("Telegram", data.telegramLink)
