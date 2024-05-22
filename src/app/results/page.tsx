@@ -31,7 +31,6 @@ export default function Results() {
             {results.map((item: any, index: any) => (
                 <div key={index} className="pt-10 overflow-x-auto">
                     <p className="card-title">{item.date}</p>
-                    <hr className="border-black" />
                     <table className="table bg-base-200">
                         {/* head */}
                         <thead>
