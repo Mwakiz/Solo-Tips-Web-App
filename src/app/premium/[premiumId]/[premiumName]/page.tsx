@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 export default function Premium() {
   const params: any = useParams()
   const [predictions, setPredictions] = useState<any>([]);
+  const [jackpot, setJackpot] = useState<any>([]);
   const [name, setName] = useState<any>("");
   const [id, setId] = useState<any>("");
   const [error, setError] = useState(null);
@@ -37,70 +38,62 @@ export default function Premium() {
         }
 
         if (params.premiumId == "sportpesa_mega_1") {
-          setPredictions(data.sportpesa_mega_1)
+          setJackpot(data.sportpesa_mega_1)
 
         }
 
         if (params.premiumId == "sportpesa_mega_2") {
-          setPredictions(data.sportpesa_mega_2)
+          setJackpot(data.sportpesa_mega_2)
 
         }
       if (params.premiumId == "sportpesa_mega_3") {
-          setPredictions(data.sportpesa_mega_3)
+          setJackpot(data.sportpesa_mega_3)
 
         }
       if (params.premiumId == "sportpesa_mega_4") {
-          setPredictions(data.sportpesa_mega_4)
+          setJackpot(data.sportpesa_mega_4)
 
         }
       if (params.premiumId == "sportpesa_mid_1") {
-          setPredictions(data.sportpesa_mid_1)
+          setJackpot(data.sportpesa_mid_1)
 
         }
       if (params.premiumId == "sportpesa_mid_2") {
-          setPredictions(data.sportpesa_mid_2)
+          setJackpot(data.sportpesa_mid_2)
 
         }
       if (params.premiumId == "sportpesa_mid_3") {
-          setPredictions(data.sportpesa_mid_3)
+          setJackpot(data.sportpesa_mid_3)
 
         }
       if (params.premiumId == "sportpesa_mid_4") {
-          setPredictions(data.sportpesa_mid_4)
+          setJackpot(data.sportpesa_mid_4)
 
         }
         if (params.premiumId == "betika_1") {
-          setPredictions(data.betika_1)
-
+          setJackpot(data.betika_1)
         }
       if (params.premiumId == "betika_2") {
-          setPredictions(data.betika_2)
-
+          setJackpot(data.betika_2)
         }
       if (params.premiumId == "betika_3") {
-          setPredictions(data.betika_3)
-
+          setJackpot(data.betika_3)
         }
       if (params.premiumId == "betika_4") {
-          setPredictions(data.betika_4)
-
+          setJackpot(data.betika_4)
         }
 
         if (params.premiumId == "mozzart_1") {
-          setPredictions(data.mozzart_1)
-
+          setJackpot(data.mozzart_1)
         }
       if (params.premiumId == "mozzart_2") {
-          setPredictions(data.mozzart_2)
-
+          setJackpot(data.mozzart_2)
         }
       if (params.premiumId == "mozzart_3") {
-          setPredictions(data.mozzart_3)
-
+          setJackpot(data.mozzart_3)
         }
        if (params.premiumId == "mozzart_4") {
-          setPredictions(data.mozzart_4)
-
+          setJackpot(data.mozzart_4)
         }
 
         if (params.premiumId == "correct_score_one") {
@@ -161,6 +154,12 @@ export default function Premium() {
             <TablePrediction key = {index} predictions={listItem} index={index} />
           ))}
         </table>
+        <div className="pt overflow-x-auto">
+          {predictions.map((listItem: any, index: any) => (
+            <p className="card-title">{listItem.prediction}</p>
+          ))}
+        
+          </div>
       </div>
     </section>
   )
