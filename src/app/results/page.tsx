@@ -10,7 +10,7 @@ export default function Results() {
     const [loading, setLoading] = useState(true);
     async function fetchData() {
         try {
-            const response = await fetch("https://mwakiz.github.io/plan/results.json");
+            const response = await fetch("https://faderriko.github.io/WebTips/prediction_results.json");
             const data = await response.json();
             console.log("response data", data.predictionResults)
             setResults(data.predictionResults);
@@ -31,6 +31,7 @@ export default function Results() {
             {results.map((item: any, index: any) => (
                 <div key={index} className="pt-10 overflow-x-auto">
                     <p className="card-title">{item.date}</p>
+                    <hr className="border-black" />
                     <table className="table bg-base-200">
                         {/* head */}
                         <thead>

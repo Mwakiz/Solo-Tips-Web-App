@@ -10,7 +10,6 @@ import { useState, useEffect } from 'react'
 export default function Premium() {
   const params: any = useParams()
   const [predictions, setPredictions] = useState<any>([]);
-  const [jackpot, setJackpot] = useState<any>([]);
   const [name, setName] = useState<any>("");
   const [id, setId] = useState<any>("");
   const [error, setError] = useState(null);
@@ -19,7 +18,7 @@ export default function Premium() {
   async function fetchData() {
     try {
 
-      const response = await fetch("https://mwakiz.github.io/plan/predictions.json");
+      const response = await fetch("https://faderriko.github.io/WebTips/predictions.json");
       const data = await response.json();
       const name = params.premiumName.split('%20').join(' ')
       const id = params.premiumId
@@ -37,63 +36,24 @@ export default function Premium() {
 
         }
 
-        if (params.premiumId == "sportpesa_mega_1") {
-          setJackpot(data.sportpesa_mega_1)
+        if (params.premiumId == "sportpesa_mega_jackpot") {
+          setPredictions(data.sportpesa_mega_jackpot)
 
         }
 
-        if (params.premiumId == "sportpesa_mega_2") {
-          setJackpot(data.sportpesa_mega_2)
+        if (params.premiumId == "sportpesa_mid_week_jackpot") {
+          setPredictions(data.sportpesa_mid_week_jackpot)
 
         }
-      if (params.premiumId == "sportpesa_mega_3") {
-          setJackpot(data.sportpesa_mega_3)
+
+        if (params.premiumId == "betika_jackpot") {
+          setPredictions(data.betika_jackpot)
 
         }
-      if (params.premiumId == "sportpesa_mega_4") {
-          setJackpot(data.sportpesa_mega_4)
 
-        }
-      if (params.premiumId == "sportpesa_mid_1") {
-          setJackpot(data.sportpesa_mid_1)
+        if (params.premiumId == "mozzart_jackpot") {
+          setPredictions(data.mozzart_jackpot)
 
-        }
-      if (params.premiumId == "sportpesa_mid_2") {
-          setJackpot(data.sportpesa_mid_2)
-
-        }
-      if (params.premiumId == "sportpesa_mid_3") {
-          setJackpot(data.sportpesa_mid_3)
-
-        }
-      if (params.premiumId == "sportpesa_mid_4") {
-          setJackpot(data.sportpesa_mid_4)
-
-        }
-        if (params.premiumId == "betika_1") {
-          setJackpot(data.betika_1)
-        }
-      if (params.premiumId == "betika_2") {
-          setJackpot(data.betika_2)
-        }
-      if (params.premiumId == "betika_3") {
-          setJackpot(data.betika_3)
-        }
-      if (params.premiumId == "betika_4") {
-          setJackpot(data.betika_4)
-        }
-
-        if (params.premiumId == "mozzart_1") {
-          setJackpot(data.mozzart_1)
-        }
-      if (params.premiumId == "mozzart_2") {
-          setJackpot(data.mozzart_2)
-        }
-      if (params.premiumId == "mozzart_3") {
-          setJackpot(data.mozzart_3)
-        }
-       if (params.premiumId == "mozzart_4") {
-          setJackpot(data.mozzart_4)
         }
 
         if (params.premiumId == "correct_score_one") {
@@ -154,12 +114,6 @@ export default function Premium() {
             <TablePrediction key = {index} predictions={listItem} index={index} />
           ))}
         </table>
-        <div className="pt overflow-x-auto">
-          {predictions.map((listItem: any, index: any) => (
-            <p className="card-title">{listItem.prediction}</p>
-          ))}
-        
-          </div>
       </div>
     </section>
   )

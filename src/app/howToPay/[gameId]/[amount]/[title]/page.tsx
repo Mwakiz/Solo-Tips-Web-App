@@ -7,8 +7,25 @@ import { useRouter } from 'next/navigation';
 
 export default function HowToPay({ params }: { params: { gameId: any, amount: any, title: any } }) {
     const [message, setMessage] = useState<any>("")
+    const [tillNumber, setTillNumber] = useState<String | null>(null)
     const [error, setError] = useState<any>("")
     const router = useRouter()
+
+    async function fetchData() {
+        try {
+            const response = await fetch("https://faderriko.github.io/WebTips/plans.json");
+            const data = await response.json();
+            if(data){
+                setTillNumber(data.tillNumber)
+            }
+            console.log("Data", data)
+            // setLoading(false);
+        } catch (error) {
+            setError(error as any);
+            // setLoading(false);
+        }
+    }
+    fetchData();
 
     const validateMessage = () => {
         if (message.length < 30) {
@@ -59,7 +76,7 @@ export default function HowToPay({ params }: { params: { gameId: any, amount: an
                         <p className="text-base text-bold">1.Go to M-PESA</p>
                         <p className="text-base">2. Select Lipa na M-PESA</p>
                         <p className="text-base">3. Select Buy Goods</p>
-                        <p className="text-base">4. Enter Till No: 8365276</p>
+                        <p className="text-base">4. Enter Till No: {tillNumber}</p>
                         <p className="text-base">5. Enter amount {params.amount.replace("%20", " ")}</p>
                         <p className="text-base">6. After you have paid, you will receive a payment confirmation message from M-PESA</p>
                         <p className="text-base">7. Copy and paste the message below and validate</p>
