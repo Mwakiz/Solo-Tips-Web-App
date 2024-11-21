@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Hero from "../../../../../components/Hero"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation';
 
 export default function HowToPay({ params }: { params: { gameId: any, amount: any, title: any } }) {
@@ -13,12 +13,11 @@ export default function HowToPay({ params }: { params: { gameId: any, amount: an
 
     async function fetchData() {
         try {
-            const response = await fetch("https://faderriko.github.io/WebTips/plans.json");
+            const response = await fetch("https://mwakiz.github.io/plan/plan.json");
             const data = await response.json();
             if(data){
                 setTillNumber(data.tillNumber)
             }
-            console.log("Data", data)
             // setLoading(false);
         } catch (error) {
             setError(error as any);
