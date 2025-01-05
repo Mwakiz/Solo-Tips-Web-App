@@ -81,7 +81,7 @@ const Navbar = () => {
               />
             </Link>
             <Link
-              href={telegramLink}
+              href={whatsAppLink}
               role="button"
               className="btn btn-ghost text-xl"
             >
